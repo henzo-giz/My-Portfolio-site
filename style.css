@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+
+:root {
+  --primery-font: "Josefin Sans", sans-serif;
+  --secondary-font: "Sansation", sans-serif;
+  --additional-font: "Cal Sans", sans-serif;
+  --secondary-textC: #bebebe;
+  --tag-gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  --tag-gradient2: linear-gradient(to right, #485563, #29323c);
+  --text-gradient: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background: var(--tag-gradient);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* width: 50%; */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .sidebar {
+    width: 70%;
+    padding: 25rem;
+    position: fixed;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    font-family: var(--primery-font);
+  }
+
+  .content-wrapper {
+    margin-left: 900px;
+    width: calc(100% - 900px);
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+    z-index: 1; /* So it's over the gradient */
+  }
+
+  section {
+    margin-bottom: 100vh; /* Example long sections */
+    padding: 2rem 0;
+    width: 80%;
+  }
+
+  .sidebar h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: white;
+    font-family: var(--primery-font);
+  }
+
+  h4 {
+    font-family: var(--primery-font);
+    font-size: 1.2rem;
+    color: white
+  }
+
+   p {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-textC);
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--secondary-font);
+    padding-top: 5rem;
+  }
+  
+  
+  nav {
+    margin-left: 7rem;
+  }
+
+  nav ul li {
+    padding-top: 10px;
+    color: var(--secondary-textC);
+    text-decoration: none;
+    padding-left: 1rem;
+    list-style: url(assets/minusGray55.png);
+  }
+
+  nav ul li:hover{
+    list-style: url(assets/minusWhite85.png);
+    font-size: 1.5rem;
+    margin-left: 2.1rem;
+  }
+  
+  nav ul li a {
+    color: var(--secondary-textC);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: white;
+  }
+  
+  /* Active Nav Link */
+  nav ul li a.active {
+    color: rgb(255, 255, 255);
+  }
+  
+  .social-links{
+    color: var(--secondary-textC);
+    font-size: 1.5rem;
+    padding: 24rem 0;
+  }
+  
+  .social-links i {
+    padding: 10px;
+  }
+
+  .social-links i:hover {
+    color: white;
+    font-size: 1.7rem;
+  }
+  
+  .content {
+    padding: 2rem;
+    scroll-behavior: smooth;
+    margin-right: 200px;
+  }
+
+  .about {
+    margin: auto;
+    padding-top: 10%;
+  }
+
+  .about p {
+    padding-top: 5%;
+    line-height: 1.5rem;
+  }
+
+  .projects {
+    margin: auto;
+  }
+
+  .project-card {
+    border: rgba(41, 79, 129, 0.2) solid 2px;
+    border-radius: 20px;
+    margin: 20px 0;
+    background-color: rgba(41, 79, 129, 0.2);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-item {
+    display: grid;
+  }
+
+  .project-content {
+   
+    margin: 10px 0 0 10px;
+  }
+
+  .project-content a {
+    text-decoration: none;
+  }
+
+  .project-content a h4{
+    color: rgb(0, 255, 213);
+  }
+  
+  .project-content p{
+    padding-top: 5px;
+    line-height: 1.5rem;
+  }
+
+  .project-image img {
+    height: 5rem;
+    margin: 10px 0 0 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color), var(--light-blue));
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-family: var(--additional-font);
+}
+
+  .project-tags span {
+    background-color: rgba(41, 79, 129, 0.4);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 247, 255);
+    font-family: "Cal Sans", sans-serif;;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.contact {
+  margin: auto;
+}
+
+.contect .content i {
+  font-size: 1.2rem;
+  color: #0f0c29;
+}
+
+.info {
+  padding: .5rem;
+
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--secondary-textC);
+  font-family: var(--secondary-font);
+  margin-top: 20px;
+}
+
+.info a:hover{
+  color: rgb(44, 245, 211);
+}
+
+  /* Mouse gradient background */
+  .mouse-gradient {
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
