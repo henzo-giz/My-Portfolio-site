@@ -259,3 +259,56 @@ body {
     transform: translate(-50%, -50%);
     z-index: 0;
   }
+
+@media screen and (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+       width: 100%;
+       padding: 2rem;
+       position: relative;
+       height: auto;
+       margin-bottom: .3rem;
+    }
+
+    .content-wrapper {
+      width: 100%;
+      margin-left: 0;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      font-size: 2.5rem;
+    }
+
+    .sidebar h3 {
+      font-size: 1.5rem;
+    }
+
+    .sidebar nav {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .content {
+      margin-left: 0;
+      padding: 2rem;
+      overflow-y: hidden;
+      width: 80%;
+    }
+
+    .sidebar nav {
+      padding-top: 2rem;
+    }
+
+    .social-links {
+      padding: 1rem 0;
+    }
+
+    .social-links i {
+      padding: 0.5rem;
+    }    
+  }
